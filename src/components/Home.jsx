@@ -26,6 +26,18 @@ export const Home = () => {
             Tarefas
     </button>
 
+    <button className='btn btn-outline-secondary my-2 my-sm-0'
+            onClick={() => navigate("/contador")}
+      >
+            Contador
+    </button>
+
+    <button className='btn btn-outline-secondary my-2 my-sm-0'
+            onClick={() => navigate("/tabelas")}
+      >
+            Tabelas
+    </button>
+
 
     </div>
     

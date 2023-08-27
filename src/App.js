@@ -4,6 +4,8 @@ import { EmployeeList , EmployeeForm } from "./components";
 import { MotoboyList , MotoboyForm } from "./components";
 import { TarefaList , TarefaForm } from "./components";
 import { Home } from "./components";
+import { Contador } from "./components";
+import { TabsDashboard } from "./components";
 
 
 
@@ -30,6 +32,11 @@ export const App =() => {
       <Route path="/listar-tarefa" element={<TarefaList/>}/>
       <Route path="/cadastrar-tarefa" element={<TarefaForm/>}/>
       <Route path="/editar-tarefa/:id" element={<TarefaForm/>}/>
+
+      <Route path="/contador" element={<Contador/>}/>
+
+      <Route path="/tabelas" element={<TabsDashboard/>}/>
+
     </Routes>
     </div>
 

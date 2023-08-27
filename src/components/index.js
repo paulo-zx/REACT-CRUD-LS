@@ -6,4 +6,6 @@ export {MotoboyList} from './MotoboyList';
 export {TarefaForm} from './TarefaForm';
 export {TarefaList} from './TarefaList';
 export {Home} from './Home';
+export {Contador} from './Contador';
+export {TabsDashboard} from './TabsDashboard'
 
