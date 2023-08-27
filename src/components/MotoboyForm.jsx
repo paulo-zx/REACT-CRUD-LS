@@ -1,9 +1,9 @@
 import { useNavigate, useParams } from "react-router-dom"
 import { useForm } from "../hooks/useForm";
-import { addEmployee, getEmployeeById, editEmployee } from "../services/localstorage";
+import { addMotoboy, getMotoboyById, editMotoboy } from "../services/localstorageMotoboy";
 import { useEffect, useState } from "react";
 
-export const EmployeeForm = () => { 
+export const MotoboyForm = () => { 
   const navigate = useNavigate();
   const {id} = useParams();
   const [showAlert, setShowAlert] = useState(false);
@@ -17,14 +17,14 @@ export const EmployeeForm = () => {
 
   useEffect(()=> {
     if(id) {
-      const employee = getEmployeeById(id);
-      setForm(employee);
+      const motoboy = getMotoboyById(id);
+      setForm(motoboy);
     }
   }, [id]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    id ? editEmployee(id, inputValues) : addEmployee(inputValues);
+    id ? editMotoboy(id, inputValues) : addMotoboy(inputValues);
     setShowAlert(true);
     resetForm();
     setTimeout(()=>{
@@ -37,8 +37,8 @@ export const EmployeeForm = () => {
     <div>
       {/* Header*/ }
       <div className="d-flex my-5 justify-content-between">
-        <button className='btn btn-outline-secondary' onClick={()=>navigate("/listar-cliente")}>Voltar</button>
-        <h1> {id ? "Editar" : "Cadastro do"} Cliente</h1>
+        <button className='btn btn-outline-secondary' onClick={()=>navigate("/listar-motoboy")}>Voltar</button>
+        <h1> {id ? "Editar" : "Cadastro do"} Motoboy</h1>
         <div />
       </div>
 
@@ -100,7 +100,7 @@ export const EmployeeForm = () => {
           </div>
 
           <div className="d-grid gap-2 mt-3">
-            <button type="submit" className="btn btn-outline-primary">Adicionar Cliente</button>
+            <button type="submit" className="btn btn-outline-primary">Adicionar Motoboy</button>
           </div>
           
 

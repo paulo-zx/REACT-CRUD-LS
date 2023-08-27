@@ -15,9 +15,9 @@ export const Navbar = () => {
       </ul>
 
       <button className='btn btn-outline-secondary my-2 my-sm-0'
-            onClick={() => navigate("/cadastrar-cliente")}
+            onClick={() => navigate("/")}
       >
-            Cadastrar Cliente
+            HOME
         </button>
       
     </div>
